@@ -1,0 +1,28 @@
+Declare variables
+TRY
+   GET how many columns of bars
+   IF number of rows is valid THEN
+      Calculate the gap size
+      Add gap size to the current x position
+      FOR each set of bars to draw
+         FOR each set to draw
+            IF first 5 rows
+               Fill bar with the color silver
+            ELSE
+               Fill bar with the color gold                   
+         DRAW bar at current x and y position
+         SHIFT x to the right by the width of bar + gap
+         ENDFOR
+         SHIFT y down by height of the bar + gap
+         SHIFT x to the start of the line 
+      ENDFOR
+   ELSE
+      Display error message
+      Clear the textbox
+      Set focus to the textbox
+   ENDIF
+CATCH
+   Display error message
+   Clear the textbox
+   Set focus to the textbox
+ENDTRY
