@@ -85,18 +85,18 @@ namespace PracTest2
                 if (numBars >= MIN_ROWS && numBars <= MAX_ROWS)
                 {
                     for (int line = 1; line <= numBars; line++)
-                    {
-                        //Check the row count to set the color
-                        if (line <= SILVER_BARS)
-                        {
-                            paper.FillRectangle(brSilver, x, y, BAR_WIDTH, BAR_HEIGHT);
-                        }
-                        else
-                        {
-                            paper.FillRectangle(brGold, x, y, BAR_WIDTH, BAR_HEIGHT);
-                        }
+                    {                     
                         for (int i = 0; i <= numBars; i++)
-                        {                            
+                        {
+                            //Check the row count to set the color
+                            if (i <= SILVER_BARS)
+                            {
+                                paper.FillRectangle(brSilver, x, y, BAR_WIDTH, BAR_HEIGHT);
+                            }
+                            else
+                            {
+                                paper.FillRectangle(brGold, x, y, BAR_WIDTH, BAR_HEIGHT);
+                            }
                             //DRAW bar at current x and y position
                             paper.DrawRectangle(Pen1, x, y, BAR_WIDTH, BAR_HEIGHT);
                             //paper.FillRectangle(brGold, x, y, BAR_WIDTH, BAR_HEIGHT);
